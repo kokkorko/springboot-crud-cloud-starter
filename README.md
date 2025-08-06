@@ -1,18 +1,3 @@
-# springboot-crud-cloud-starter
+# Spring Boot CRUD App
 
-Minimal Spring Boot CRUD REST API starter.  
-Includes sample entity, repository, and controller.  
-Ready for cloud deployment!
-
-## How to run
-
-```bash
-./mvnw spring-boot:run
-```
-
-## Endpoints
-
-- `GET /entities` - List all entities
-- `POST /entities` - Create entity
-- `PUT /entities/{id}` - Update entity
-- `DELETE /entities/{id}` - Delete entity
+This is a Spring Boot CRUD application with persistent PostgreSQL and Docker support. It also includes Minikube manifests for deployment.
