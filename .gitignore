@@ -1,0 +1,15 @@
+/build/
+/out/
+/.gradle
+/.idea
+*.iml
+*.log
+*.db
+*.class
+*.jar
+*.war
+*.ear
+target/
+*.swp
+.DS_Store
+.env
