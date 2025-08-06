@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudstarter-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudstarter
+  template:
+    metadata:
+      labels:
+        app: cloudstarter
+    spec:
+      containers:
+      - name: cloudstarter
+        image: cloudstarter:local
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: jdbc:postgresql://postgres:5432/cloudstarter
+        - name: SPRING_DATASOURCE_USERNAME
+          value: demo
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: demopass
